@@ -24,35 +24,68 @@
 				<form action="" method="post">
 					<div class="form-container">
 						<div class="input-area">
-							<label for="first-name">FIRST NAME</label>
-							<input type="text" id="first-name" name="first-name" />
+							<label for="first-name">FIRST NAME *</label>
+							<input
+								type="text"
+								id="first-name"
+								name="first-name"
+								placeholder="John"
+								required
+							/>
 						</div>
 						<div class="input-area">
 							<label for="last-name">LAST NAME</label>
-							<input type="text" id="last-name" name="last-name" />
+							<input
+								type="text"
+								id="last-name"
+								name="last-name"
+								placeholder="Smith"
+							/>
 						</div>
 						<div class="input-area">
-							<label for="email">EMAIL</label>
-							<input type="email" name="email" id="email" />
+							<label for="email">EMAIL *</label>
+							<input
+								type="email"
+								name="email"
+								id="email"
+								placeholder="johnsmith@something.com"
+                                required
+							/>
 						</div>
 						<div class="input-area">
 							<label for="phone-number">PHONE NUMBER</label>
-							<input type="number" name="phone-number" id="phone-number" />
+							<input
+								type="tel"
+								name="phone-number"
+								id="phone-number"
+								pattern="[0-9]{3}*[0-9]{3}*[0-9]{4}"
+								minlength="10"
+								placeholder="(012)345-6789"
+							/>
 						</div>
 						<div class="input-area">
-							<label for="password">PASSWORD</label>
-							<input type="password" name="password" id="password" />
+							<label for="password">PASSWORD *</label>
+							<input
+								type="password"
+								name="password"
+								id="password"
+								minlength="5"
+								placeholder="please enter your password"
+								required
+							/>
 						</div>
 						<div class="input-area">
-							<label for="confirm-password">CONFIRM PASSWORD</label>
+							<label for="confirm-password">CONFIRM PASSWORD *</label>
 							<input
 								type="confirm-password"
 								name="confirm-password"
 								id="confirm-password"
+								placeholder="please re-enter your password"
+								required
 							/>
 						</div>
 					</div>
-					<div class="crate-acc-btn">
+					<div class="create-acc-btn grid-col-span-2">
 						<button type="submit">Create Account</button>
 					</div>
 				</form>

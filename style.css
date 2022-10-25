@@ -1,3 +1,10 @@
+:root {
+    --bg-transparent: rgba(0, 0, 0, 0.2);
+    --padding-standard: 2rem;
+    --font-standard: 1rem;
+    --border-radius: 0.5rem;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -20,9 +27,9 @@
     top: 5rem;
     display: flex;
     width: 90%;
-    padding: 2rem;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 1rem;
+    padding: var(--padding-standard);
+    background-color: var(--bg-transparent);
+    border-radius: var(--border-radius);
 }
 
 .logo {
@@ -52,25 +59,71 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 2rem;
+    padding: var(--padding-standard);
+
 }
 
 .form-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    padding: var(--padding-standard);
+    background-color: var(--bg-transparent);
+    border-radius: var(--border-radius);
+    margin: 4rem;
     gap: 1rem;
+}
+
+.grid-col-span-2 {
+    grid-column: span 2;
 }
 
 .input-area {
     display: flex;
     flex-direction: column;
-    font-size: 0.8rem;
+    padding: calc(var(--padding-standard)/2);
+    gap: 0.5rem;
+    border: 1px solid black;
+    border-radius: var(--border-radius);
+}
+
+label {
+    font-size: var(--font-standard);
+}
+
+input {
+    padding: 0.3rem;
+    transition: all 200ms ease-out;
+    border: none;
+    background-color: rgba(240, 248, 255, 0);
+    outline: none;
+    font-size: var(--font-standard);
+}
+
+input:focus {
+    border: none;
+    transition: all 200ms ease-in;
+    scale: 1.05;
+    box-shadow: 2px 2px 2px royalblue;
+    font-size: calc(var(--font-standard)*1.2);
+    border-radius: 0 0 var(--border-radius);
+}
+
+input:invalid {
+    color: red;
+}
+
+
+.create-ac-btn {
+    position: relative;
 }
 
 button {
-    margin: 1rem;
-    margin-left: auto;
+    font-size: var(--font-standard);
+    position: absolute;
+    right: 2rem;
+    margin-right: 4rem;
     padding: 0.75rem;
+    border-radius: var(--border-radius);
 }
 
 .have-acc {
