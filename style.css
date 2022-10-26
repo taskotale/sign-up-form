@@ -3,8 +3,8 @@
     --padding-standard: 2rem;
     --font-standard: 1rem;
     --border-radius: 0.5rem;
-    --box-shadow: 2px 2px 2px royalblue;
     --base-color: royalblue;
+    --box-shadow: 2px 2px 2px var(--base-color);
 }
 
 * {
@@ -26,7 +26,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    margin: auto;
+    margin: auto; 
     top: 5rem;
     display: flex;
     width: 90%;
@@ -46,7 +46,7 @@
     top: 0;
     bottom: 0;
     margin: auto 0 auto auto;
-    font-size: 1.25rem;
+    font-size: calc(var(--font-standard) + .25rem);
     font-weight: 100;
 }
 
@@ -64,7 +64,6 @@
     flex-direction: column;
     justify-content: space-between;
     padding: var(--padding-standard);
-
 }
 
 .form-container {
@@ -74,8 +73,10 @@
     background-color: var(--bg-transparent);
     border-radius: var(--border-radius);
     margin: 4rem;
-    gap: 1rem;
+    gap: 2rem;
     box-shadow: var(--box-shadow);
+    overflow: hidden;
+
 }
 
 .grid-col-span-2 {
@@ -94,11 +95,11 @@ label {
 }
 
 input {
-    padding: 0.3rem;
-    transition: all 200ms ease-out;
     border: none;
-    background-color: rgba(240, 248, 255, 0);
     outline: none;
+    background-color: rgba(240, 248, 255, 0);
+    transition: all 200ms ease-out;
+    padding: 0.3rem;
     font-size: var(--font-standard);
 }
 
@@ -126,9 +127,17 @@ button {
     right: 2rem;
     margin-right: 4rem;
     padding: 0.75rem;
+    background-color: var(--bg-transparent);
     border-radius: var(--border-radius);
     border: none;
     box-shadow: var(--box-shadow)
+}
+
+.move {
+    right: 15rem;
+}
+button:focus {
+    scale: 1.05;
 }
 
 .have-acc {
