@@ -137,6 +137,11 @@ button {
     right: 15rem;
 }
 
+.move::before{
+    content: 'match you pass then - ';
+    color: red;
+}
+
 button:focus {
     scale: 1.05;
 }
@@ -164,3 +169,4 @@ button:focus {
     background-color: var(--bg-transparent);
     cursor: pointer;
 }
+

@@ -18,5 +18,4 @@ const btnJump = (buttonToMove, checkedPass) => {
     };
 };
 
-
-const clickAway = document.getElementById('click-away').addEventListener('click', e=>confirm('Are you sure?')==true? alert('Put your details anyway'):alert('good for you'))
+const clickAway = document.getElementById('click-away').addEventListener('click', e => confirm('Are you sure?') == true ? alert('Put your details anyway') : alert('good for you'))
