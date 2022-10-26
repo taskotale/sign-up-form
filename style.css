@@ -137,7 +137,7 @@ button {
     right: 15rem;
 }
 
-.move::before{
+.move::before {
     content: 'match you pass then - ';
     color: red;
 }
@@ -154,19 +154,22 @@ button:focus {
     width: 100%;
     height: 100%;
 }
+
 #info {
     position: relative;
     top: 40%;
     left: 20%;
+    font-size: 2rem;
+    color: var(--base-color);
 }
 
-#info p{
+#info p {
     color: var(--base-color);
     font-size: 2rem;
+    padding: calc(var(--padding-standard)/2);
 }
 
 #click-away:hover {
     background-color: var(--bg-transparent);
     cursor: pointer;
 }
-
