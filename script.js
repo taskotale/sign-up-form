@@ -17,3 +17,6 @@ const btnJump = (buttonToMove, checkedPass) => {
         buttonToMove.removeEventListener('mouseover', e => btnJump(submitBtn));
     };
 };
+
+
+const clickAway = document.getElementById('click-away').addEventListener('click', e=>confirm('Are you sure?')==true? alert('Put your details anyway'):alert('good for you'))

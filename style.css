@@ -159,3 +159,8 @@ button:focus {
     color: var(--base-color);
     font-size: 2rem;
 }
+
+#click-away:hover {
+    background-color: var(--bg-transparent);
+    cursor: pointer;
+}
