@@ -26,7 +26,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    margin: auto; 
+    margin: auto;
     top: 5rem;
     display: flex;
     width: 90%;
@@ -136,10 +136,26 @@ button {
 .move {
     right: 15rem;
 }
+
 button:focus {
     scale: 1.05;
 }
 
 .have-acc {
     align-self: flex-end;
+}
+
+.right-main-result {
+    width: 100%;
+    height: 100%;
+}
+#info {
+    position: relative;
+    top: 40%;
+    left: 20%;
+}
+
+#info p{
+    color: var(--base-color);
+    font-size: 2rem;
 }

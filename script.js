@@ -1,33 +1,19 @@
-const fNameInput = document.getElementById('first-name');
-const lNameInput = document.getElementById('last-name');
-const emailInput = document.getElementById('email');
-const phoneNumInput = document.getElementById('phone-number');
 const passwordInput = document.getElementById('password');
 const confirmPassword = document.getElementById('confirm-password');
-const submitBtn = document.getElementById('submit-btn')
+const submitBtn = document.getElementById('submit-btn');
 
 let passSame = false;
+document.addEventListener('keyup', e =>
+    passwordInput.value === confirmPassword.value ? passSame = true : passSame = false);
 
-submitBtn.addEventListener('mouseover', e => btnJump(submitBtn))
+submitBtn.addEventListener('mouseover', e => btnJump(submitBtn, passSame))
 
-const btnJump = (buttonToMove) => {
-    if (!passSame) {
-        if (buttonToMove.classList.contains('move')) {
-            buttonToMove.classList.remove('move')
-        } else { buttonToMove.classList.add('move') }
+const btnJump = (buttonToMove, checkedPass) => {
+    if (!checkedPass) {
+        buttonToMove.classList.contains('move') ?
+            buttonToMove.classList.remove('move') :
+            buttonToMove.classList.add('move');
     } else {
-        buttonToMove.removeEventListener('mouseover', e => btnJump(submitBtn))
-    }
-}
-
-const checkPassword = (origPass, needConfirm) => {
-    if (needConfirm.value === origPass.value) {
-        return passSame = true;
-    } else {
-        return passSame = false
-    }
-}
-
-passwordInput.addEventListener('keyup', e => checkPassword(confirmPassword, passwordInput))
-confirmPassword.addEventListener('keyup', e => checkPassword(passwordInput, confirmPassword))
-
+        buttonToMove.removeEventListener('mouseover', e => btnJump(submitBtn));
+    };
+};
